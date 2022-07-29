@@ -125,7 +125,7 @@ if ! zgen saved; then
 
   # fzf-marks
   zgen load urbainvaes/fzf-marks
-
+  zgen load bckim92/zsh-autoswitch-conda
   zgen load zsh-users/zsh-autosuggestions
   if (( $+commands[virtualenvwrapper_lazy.sh] || $+commands[conda] )); then
     # Use my own fork for a while, to support autoswitch into anaconda envs
@@ -172,7 +172,7 @@ if (( $+commands[iterm-tab-color] )); then
     }
     iterm_tab_color_auto
 fi
-
+export PYTHONSTARTUP=$HOME/.pythonstartup.py
 # Anaconda3
 # see ~/.zshenv for $CONDA_EXE detection
 function _conda_initialize() {
